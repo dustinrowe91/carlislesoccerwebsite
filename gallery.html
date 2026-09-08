@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photo Gallery | Carlisle Soccer Club</title>
+  <meta name="description" content="Season photos from Carlisle Soccer Club." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%E2%9A%BD%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body data-page="gallery">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Photo Gallery</h2>
+          <p>Moments from past seasons. Real photos coming soon.</p>
+        </div>
+        <div class="callout">
+          <strong>TODO:</strong> Replace the colored placeholders below with real season photos. Add image files (e.g. to an <code>images/gallery/</code> folder) and update <code>data/gallery.json</code> to reference them instead of a placeholder color.
+        </div>
+        <div class="gallery-grid" id="gallery-grid">
+          <p>Loading photos&hellip;</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="js/main.js"></script>
+  <script>
+    renderGallery('gallery-grid');
+  </script>
+</body>
+</html>

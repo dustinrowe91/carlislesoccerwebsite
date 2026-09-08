@@ -1,0 +1,24 @@
+[
+  {
+    "tier": "Gold Sponsors",
+    "sponsors": [
+      { "name": "TODO Sponsor A", "url": "#" },
+      { "name": "TODO Sponsor B", "url": "#" }
+    ]
+  },
+  {
+    "tier": "Silver Sponsors",
+    "sponsors": [
+      { "name": "TODO Sponsor C", "url": "#" },
+      { "name": "TODO Sponsor D", "url": "#" },
+      { "name": "TODO Sponsor E", "url": "#" }
+    ]
+  },
+  {
+    "tier": "Community Supporters",
+    "sponsors": [
+      { "name": "TODO Sponsor F", "url": "#" },
+      { "name": "TODO Sponsor G", "url": "#" }
+    ]
+  }
+]

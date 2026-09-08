@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Us | Carlisle Soccer Club</title>
+<meta name="description" content="Get in touch with Carlisle Soccer Club.">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="about.html">About</a> / Contact</div>
+      <h1>Contact Us</h1>
+      <p>Questions about registration, teams, fields, or volunteering? We're happy to help.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="content-cols">
+        <div class="prose">
+          <h2>Send us a message</h2>
+          <form action="#" method="post" id="contactForm">
+            <p>
+              <label for="name"><strong>Your name</strong></label><br>
+              <input id="name" name="name" type="text" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
+            </p>
+            <p>
+              <label for="email"><strong>Email</strong></label><br>
+              <input id="email" name="email" type="email" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
+            </p>
+            <p>
+              <label for="topic"><strong>Topic</strong></label><br>
+              <select id="topic" name="topic" style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
+                <option>Registration</option>
+                <option>Recreational program</option>
+                <option>Select program</option>
+                <option>Coaching / volunteering</option>
+                <option>Referees</option>
+                <option>Fields &amp; facilities</option>
+                <option>Other</option>
+              </select>
+            </p>
+            <p>
+              <label for="message"><strong>Message</strong></label><br>
+              <textarea id="message" name="message" rows="6" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;"></textarea>
+            </p>
+            <p><button class="btn btn-primary" type="submit">Send message</button></p>
+          </form>
+          <p class="note">This form needs a submission endpoint (for example an Azure Static Web Apps function or a form service) before it will deliver mail. Until then, please use Facebook or the club email address.</p>
+        </div>
+
+        <aside class="aside">
+          <h3>Quick contacts</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/CarlisleSoccer" target="_blank" rel="noopener">Facebook &mdash; fastest response</a></li>
+            <li><a href="staff.html">Board &amp; role directory</a></li>
+            <li><a href="register.html">Registration questions</a></li>
+            <li><a href="refund-policy.html">Refund policy</a></li>
+            <li><a href="financial-assistance.html">Financial assistance</a></li>
+          </ul>
+          <p class="note" style="margin-top:14px;">Mailing address and club email to be supplied by the club.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="js/site.js"></script>
+</body>
+</html>

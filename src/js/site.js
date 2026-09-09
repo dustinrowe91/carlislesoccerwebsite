@@ -2,45 +2,37 @@
 (function () {
   "use strict";
 
-  var REGISTER_URL =
-    "https://playmetrics.com/signup?clubToken=TG9naW4tQ2x1Yi52MS0yODk1LTE3ODc4NzQxMDN8YmN2QklsUDJQdzZBU05VT3BiMVNLZlFlcUw1bW5iWnZlSWtsVVFSdlVhaz0=&program_id=109891";
-
   var NAV = [
     { label: "Home", href: "index.html" },
+    { label: "Register", href: "register.html" },
+    { label: "Fields", href: "fields.html" },
+    { label: "Game Info", href: "game-information.html" },
+    {
+      label: "Play",
+      children: [
+        { label: "Practice Information", href: "practice-information.html" },
+        { label: "Age Brackets", href: "age-brackets.html" }
+      ]
+    },
     {
       label: "About",
       children: [
         { label: "About the Club", href: "about.html" },
         { label: "Our Staff & Board", href: "staff.html" },
         { label: "Locations", href: "locations.html" },
+        { label: "Refund Policy", href: "refund-policy.html" },
         { label: "Contact Us", href: "contact.html" }
       ]
     },
     {
-      label: "Register",
+      label: "Get Involved",
       children: [
-        { label: "Registration Info", href: "register.html" },
-        { label: "Select Program", href: "select-registration.html" },
-        { label: "Refund Policy", href: "refund-policy.html" },
-        { label: "Financial Assistance", href: "financial-assistance.html" },
-        { label: "Volunteer Opportunities", href: "volunteer.html" }
-      ]
-    },
-    {
-      label: "Play",
-      children: [
-        { label: "Game Information", href: "game-information.html" },
-        { label: "Practice Information", href: "practice-information.html" },
-        { label: "Age Brackets", href: "age-brackets.html" },
-        { label: "Fields & Directions", href: "fields.html" }
-      ]
-    },
-    {
-      label: "Coaches & Referees",
-      children: [
+        { label: "Volunteer Opportunities", href: "volunteer.html" },
         { label: "Coaches Corner", href: "coaches.html" },
         { label: "Referee Resources", href: "referees.html" },
-        { label: "Become a Referee", href: "become-a-referee.html" }
+        { label: "Become a Referee", href: "become-a-referee.html" },
+        { label: "Financial Assistance", href: "financial-assistance.html" },
+        { label: "Select Program", href: "select-registration.html" }
       ]
     },
     {
@@ -108,15 +100,15 @@
   function headerHtml(page) {
     return (
       '<header class="site-header" id="siteHeader"><div class="wrap header-inner">' +
-      '<a class="brand" href="index.html">' +
+      '<a class="brand" href="index.html" aria-label="Carlisle Soccer Club, Home of the Pride">' +
       '<span class="brand-mark" aria-hidden="true">CSC</span>' +
-      "<span><span class=\"brand-name\">Carlisle Soccer Club</span><br>" +
+      '<span class="brand-text" aria-hidden="true"><span class="brand-name">Carlisle Soccer Club</span><br>' +
       '<span class="brand-tag">Home of the Pride</span></span></a>' +
       '<button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>' +
       '<nav aria-label="Primary"><ul class="nav" id="primaryNav">' +
       navHtml(page) +
       "</ul></nav>" +
-      '<a class="btn btn-primary btn-sm" href="' + REGISTER_URL + '" target="_blank" rel="noopener">Register Now</a>' +
+      '<a class="btn btn-primary btn-sm" href="register.html">Register Now</a>' +
       "</div></header>"
     );
   }
@@ -209,6 +201,48 @@
     });
   }
 
+  function wireHeaderScroll() {
+    var header = document.getElementById("siteHeader");
+    if (!header) return;
+    var hero = document.querySelector(".hero, .page-hero");
+    var ticking = false;
+
+    function update() {
+      ticking = false;
+      var threshold = hero ? hero.offsetHeight - header.offsetHeight : 40;
+      var scrolled = (window.pageYOffset || document.documentElement.scrollTop) > threshold;
+      header.classList.toggle("is-solid", scrolled);
+    }
+
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(update);
+    }
+
+    update();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+  }
+
+  function syncHeaderHeight() {
+    var header = document.getElementById("siteHeader");
+    if (!header) return;
+    var root = document.documentElement;
+
+    function set() {
+      root.style.setProperty("--header-h", header.offsetHeight + "px");
+    }
+
+    set();
+    if (window.ResizeObserver) {
+      new ResizeObserver(set).observe(header);
+    } else {
+      window.addEventListener("resize", set);
+      window.addEventListener("load", set);
+    }
+  }
+
   function render() {
     var page = currentPage();
     var headerMount = document.getElementById("site-header");
@@ -216,6 +250,8 @@
     if (headerMount) headerMount.innerHTML = headerHtml(page);
     if (footerMount) footerMount.innerHTML = footerHtml();
     wireNav();
+    wireHeaderScroll();
+    syncHeaderHeight();
   }
 
   if (document.readyState === "loading") {

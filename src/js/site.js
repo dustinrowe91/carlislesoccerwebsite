@@ -101,7 +101,7 @@
     return (
       '<header class="site-header" id="siteHeader"><div class="wrap header-inner">' +
       '<a class="brand" href="index.html" aria-label="Carlisle Soccer Club, Home of the Pride">' +
-      '<span class="brand-mark" aria-hidden="true">CSC</span>' +
+      '<img class="brand-logo" src="images/logo.png" alt="" aria-hidden="true" width="48" height="48">' +
       '<span class="brand-text" aria-hidden="true"><span class="brand-name">Carlisle Soccer Club</span><br>' +
       '<span class="brand-tag">Home of the Pride</span></span></a>' +
       '<button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="primaryNav">Menu</button>' +

@@ -85,10 +85,10 @@ img { max-width: 100%; display: block; }
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, .18);
-  transition: background .1s ease, box-shadow .25s ease;
+  
 }
 .site-header.is-solid {
-  background: var(--brand);
+  background: rgba(var(--brand-rgb), .95);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
   border-bottom-color: rgba(255, 255, 255, .10);

@@ -511,7 +511,7 @@ tbody tr:hover { background: #fdf8f6; }
 @media (max-width: 620px) {
   .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
-  .hero { padding: 60px 0 68px; }
+  .hero { padding: calc(var(--header-h) + 36px) 0 68px; }
   .section { padding: 48px 0; }
   .cta-band { padding: 26px; }
 }

@@ -81,7 +81,7 @@ img { max-width: 100%; display: block; }
   left: 0;
   right: 0;
   z-index: 50;
-  background: rgba(var(--brand-rgb), .62);
+  background: var(--brand);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, .18);
@@ -302,15 +302,6 @@ img { max-width: 100%; display: block; }
 }
 .page-hero p { color: #efe4e4; margin: 18px auto 0; max-width: 70ch; }
 
-.breadcrumb {
-  font-size: .82rem;
-  color: #d9c7c7;
-  margin-bottom: 14px;
-  letter-spacing: .04em;
-}
-.breadcrumb a { color: #d9c7c7; text-decoration: none; }
-.breadcrumb a:hover { color: var(--accent); }
-
 /* ---------- Sections & layout ---------- */
 
 .section { padding: 64px 0; }
@@ -336,6 +327,20 @@ img { max-width: 100%; display: block; }
 .prose ul, .prose ol { padding-left: 1.2rem; }
 .prose li { margin-bottom: .4rem; }
 .prose > :first-child { margin-top: 0; }
+
+.field-figure { margin: 1.25rem 0 0; }
+.field-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0, 0, 0, .12);
+  background: #fff;
+}
+.field-figure figcaption {
+  margin-top: .6rem;
+  font-size: .85rem;
+  color: var(--muted);
+}
 
 .card {
   background: #fff;

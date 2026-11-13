@@ -132,7 +132,7 @@ img { max-width: 100%; display: block; }
   display: block;
   font-size: .78rem;
   line-height: 1.15;
-  color: #f0b9bc;
+  color: #f6d3d5;
   letter-spacing: .08em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -470,7 +470,7 @@ tbody tr:hover { background: #fdf8f6; }
   gap: 16px;
   flex-wrap: wrap;
   font-size: .85rem;
-  color: #dda6a6;
+  color: #f2cfcf;
 }
 
 /* ---------- Responsive ---------- */

@@ -6,6 +6,7 @@
 <title>Contact Us | Carlisle Soccer Club</title>
 <meta name="description" content="Get in touch with Carlisle Soccer Club.">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="icon" type="image/png" href="images/logo.png">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to main content</a>
@@ -23,35 +24,17 @@
     <div class="wrap">
       <div class="content-cols">
         <div class="prose">
-          <h2>Send us a message</h2>
-          <form action="#" method="post" id="contactForm">
-            <p>
-              <label for="name"><strong>Your name</strong></label><br>
-              <input id="name" name="name" type="text" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
-            </p>
-            <p>
-              <label for="email"><strong>Email</strong></label><br>
-              <input id="email" name="email" type="email" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
-            </p>
-            <p>
-              <label for="topic"><strong>Topic</strong></label><br>
-              <select id="topic" name="topic" style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;">
-                <option>Registration</option>
-                <option>Recreational program</option>
-                <option>Select program</option>
-                <option>Coaching / volunteering</option>
-                <option>Referees</option>
-                <option>Fields &amp; facilities</option>
-                <option>Other</option>
-              </select>
-            </p>
-            <p>
-              <label for="message"><strong>Message</strong></label><br>
-              <textarea id="message" name="message" rows="6" required style="width:100%;padding:11px;border:1px solid var(--line);border-radius:8px;font:inherit;"></textarea>
-            </p>
-            <p><button class="btn btn-primary" type="submit">Send message</button></p>
-          </form>
-          <p class="note">This form needs a submission endpoint (for example an Azure Static Web Apps function or a form service) before it will deliver mail. Until then, please use Facebook or the club email address.</p>
+          <h2>Get in touch</h2>
+          <p>The quickest way to reach the club is a message on our Facebook page. A board member will reply, usually within a day or two.</p>
+          <p><a class="btn btn-primary" href="https://www.facebook.com/CarlisleSoccer" target="_blank" rel="noopener">Message us on Facebook</a></p>
+          <h3>Who to ask</h3>
+          <ul>
+            <li><strong>Team, practice, or game questions:</strong> start with your coach.</li>
+            <li><strong>Registration and rosters:</strong> the registrar &mdash; see the <a href="staff.html">board directory</a>.</li>
+            <li><strong>Fees and financial assistance:</strong> the treasurer. Requests are kept confidential.</li>
+            <li><strong>Referees:</strong> the referee coordinator.</li>
+          </ul>
+          <!-- TODO(club): Add the club email and mailing address. The previous contact form was removed because it had no submission endpoint; restore it from git history once one exists. -->
         </div>
 
         <aside class="aside">
@@ -63,7 +46,6 @@
             <li><a href="refund-policy.html">Refund policy</a></li>
             <li><a href="financial-assistance.html">Financial assistance</a></li>
           </ul>
-          <p class="note" style="margin-top:14px;">Mailing address and club email to be supplied by the club.</p>
         </aside>
       </div>
     </div>

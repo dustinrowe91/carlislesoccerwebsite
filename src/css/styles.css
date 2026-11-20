@@ -436,6 +436,46 @@ tbody tr:hover { background: #fdf8f6; }
 .cta-band h2 { color: #fff; margin: 0; }
 .cta-band p { color: #f7dcdc; margin: .35rem 0 0; }
 
+/* ---------- Curriculum downloads (Coaches page) ---------- */
+
+.curriculum-feature { margin-bottom: 28px; }
+.curriculum-feature h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: var(--accent);
+  margin-top: 10px;
+}
+.doc-card {
+  display: flex;
+  flex-direction: column;
+  border-top: 4px solid var(--brand);
+}
+.doc-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.doc-age {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--brand);
+  line-height: 1;
+}
+.doc-card p { color: var(--muted); font-size: .95rem; }
+.doc-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+}
+.doc-links .btn { flex: 1; text-align: center; }
+.curriculum-note { margin: 18px 0 0; text-align: center; }
+
 /* ---------- Footer ---------- */
 
 .site-footer {

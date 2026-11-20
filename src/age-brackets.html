@@ -4,7 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Age Brackets | Carlisle Soccer Club</title>
-<meta name="description" content="Find your player's soccer age group using Iowa Soccer birth-year age brackets.">
+<meta name="description" content="Find your player's 2026-27 soccer age group and recreational division using the August 1 age cutoff.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carlisle Soccer Club">
+<meta property="og:title" content="Age Brackets | Carlisle Soccer Club">
+<meta property="og:description" content="Find your player's 2026-27 soccer age group and recreational division using the August 1 age cutoff.">
+<meta property="og:url" content="https://dustinrowe91.github.io/carlislesoccerwebsite/age-brackets.html">
+<meta property="og:image" content="https://dustinrowe91.github.io/carlislesoccerwebsite/images/hero.jpg">
+<meta property="og:image:alt" content="Carlisle Soccer Club players going up for a header during a game">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap">
@@ -28,34 +36,61 @@
       <div class="content-cols">
         <div class="prose">
           <h2>How age groups work</h2>
-          <p>US Youth Soccer and Iowa Soccer use a <strong>birth-year</strong> system. The soccer year runs from August 1 through July 31, so a player's age group is determined by the calendar year in which they were born &mdash; not their grade in school.</p>
+          <p>The 2026&ndash;27 soccer year runs from <strong>August 1, 2026 through July 31, 2027</strong>. Age groups use an <strong>August 1 cutoff</strong>, the same as the school year, so a player's age group depends on their full birth date, not just the year they were born.</p>
+          <p>Recreational teams combine two age groups into one division, so most kids play with their own grade and the grade next to it.</p>
 
-          <div class="callout">
-            <p><strong>Quick formula:</strong> Subtract your player's birth year from the year the season ends (for a fall 2026 season, that's 2027). The result is their age group. Example: born in 2017 &rarr; 2027 &minus; 2017 = U10.</p>
+          <div class="age-finder card" id="age-finder">
+            <h3>Find your player's division</h3>
+            <label for="birthdate">Player's date of birth</label>
+            <div class="age-finder-row">
+              <input type="date" id="birthdate" min="2007-08-01" max="2023-12-31">
+            </div>
+            <p class="age-finder-result" id="age-result" aria-live="polite">Enter a birth date to see the 2026&ndash;27 division.</p>
           </div>
 
-          <h2>Birth year reference</h2>
+          <h2>Recreational divisions for 2026&ndash;27</h2>
           <table>
             <thead>
-              <tr><th scope="col">Birth year</th><th scope="col">Age group</th><th scope="col">Format</th></tr>
+              <tr><th scope="col">Division</th><th scope="col">Age groups</th><th scope="col">Born between</th></tr>
             </thead>
             <tbody>
-              <tr><td>2021</td><td>U6</td><td>4v4, no keeper</td></tr>
-              <tr><td>2020</td><td>U7</td><td>4v4, no keeper</td></tr>
-              <tr><td>2019</td><td>U8</td><td>4v4 / 5v5, no keeper</td></tr>
-              <tr><td>2018</td><td>U9</td><td>7v7</td></tr>
-              <tr><td>2017</td><td>U10</td><td>7v7</td></tr>
-              <tr><td>2016</td><td>U11</td><td>9v9</td></tr>
-              <tr><td>2015</td><td>U12</td><td>9v9</td></tr>
-              <tr><td>2014</td><td>U13</td><td>11v11</td></tr>
-              <tr><td>2013</td><td>U14</td><td>11v11</td></tr>
-              <tr><td>2012 and older</td><td>U15+</td><td>11v11</td></tr>
+              <tr><td><strong>U6</strong></td><td>U5 and U6</td><td>Aug 1, 2020 &ndash; Jul 31, 2022</td></tr>
+              <tr><td><strong>U8</strong></td><td>U7 and U8</td><td>Aug 1, 2018 &ndash; Jul 31, 2020</td></tr>
+              <tr><td><strong>U10</strong></td><td>U9 and U10</td><td>Aug 1, 2016 &ndash; Jul 31, 2018</td></tr>
+              <tr><td><strong>U12</strong></td><td>U11 and U12</td><td>Aug 1, 2014 &ndash; Jul 31, 2016</td></tr>
+              <tr><td><strong>U14</strong></td><td>U13 and U14</td><td>Aug 1, 2012 &ndash; Jul 31, 2014</td></tr>
+              <tr><td><strong>High school</strong></td><td>U15 through U19</td><td>Aug 1, 2007 &ndash; Jul 31, 2012</td></tr>
             </tbody>
           </table>
-          <p class="note">Reference shown for the 2026&ndash;27 soccer year. Shift the table by one year for each subsequent season, and confirm against the current Iowa Soccer age matrix.</p>
+          <p class="note">Game formats and match lengths for each division are on the <a href="game-information.html">game information</a> page.</p>
 
-          <h2>Combined age groups</h2>
-          <p>Because Carlisle is a smaller club, some recreational divisions combine two birth years (for example U9/U10) to field complete teams. The club aims to keep players with their peers whenever roster numbers allow.</p>
+          <h2>Individual age groups</h2>
+          <p>Select teams and some tournaments use single age groups. Use this table to find your player's exact group for 2026&ndash;27.</p>
+          <table>
+            <thead>
+              <tr><th scope="col">Age group</th><th scope="col">Born between</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>U5</td><td>Aug 1, 2021 &ndash; Jul 31, 2022</td></tr>
+              <tr><td>U6</td><td>Aug 1, 2020 &ndash; Jul 31, 2021</td></tr>
+              <tr><td>U7</td><td>Aug 1, 2019 &ndash; Jul 31, 2020</td></tr>
+              <tr><td>U8</td><td>Aug 1, 2018 &ndash; Jul 31, 2019</td></tr>
+              <tr><td>U9</td><td>Aug 1, 2017 &ndash; Jul 31, 2018</td></tr>
+              <tr><td>U10</td><td>Aug 1, 2016 &ndash; Jul 31, 2017</td></tr>
+              <tr><td>U11</td><td>Aug 1, 2015 &ndash; Jul 31, 2016</td></tr>
+              <tr><td>U12</td><td>Aug 1, 2014 &ndash; Jul 31, 2015</td></tr>
+              <tr><td>U13</td><td>Aug 1, 2013 &ndash; Jul 31, 2014</td></tr>
+              <tr><td>U14</td><td>Aug 1, 2012 &ndash; Jul 31, 2013</td></tr>
+              <tr><td>U15</td><td>Aug 1, 2011 &ndash; Jul 31, 2012</td></tr>
+              <tr><td>U16</td><td>Aug 1, 2010 &ndash; Jul 31, 2011</td></tr>
+              <tr><td>U17</td><td>Aug 1, 2009 &ndash; Jul 31, 2010</td></tr>
+              <tr><td>U18</td><td>Aug 1, 2008 &ndash; Jul 31, 2009</td></tr>
+              <tr><td>U19</td><td>Aug 1, 2007 &ndash; Jul 31, 2008</td></tr>
+            </tbody>
+          </table>
+          <div class="callout">
+            <p><strong>Quick check:</strong> born January through July? Subtract the birth year from 2027. Born August through December? Subtract it from 2026. Example: born March 2017 &rarr; U10; born September 2017 &rarr; U9.</p>
+          </div>
 
           <h2>Playing up</h2>
           <p>Players may request to play in an older age group. Requests are reviewed by the recreational or select director based on the player's ability, safety, and roster space. Playing down is not permitted.</p>
@@ -77,5 +112,44 @@
 
 <div id="site-footer"></div>
 <script src="js/site.js"></script>
+<script>
+  // 2026-27 soccer year. To roll forward a season, add 1 to SEASON_END_YEAR.
+  (function () {
+    var SEASON_END_YEAR = 2027;
+    var DIVISIONS = [
+      { max: 6, name: "U6 division (U5 and U6)" },
+      { max: 8, name: "U8 division (U7 and U8)" },
+      { max: 10, name: "U10 division (U9 and U10)" },
+      { max: 12, name: "U12 division (U11 and U12)" },
+      { max: 14, name: "U14 division (U13 and U14)" },
+      { max: 19, name: "high school division (U15 to U19)" }
+    ];
+    var input = document.getElementById("birthdate");
+    var out = document.getElementById("age-result");
+    if (!input || !out) return;
+
+    input.addEventListener("input", function () {
+      var parts = input.value.split("-");
+      if (parts.length !== 3) {
+        out.textContent = "Enter a birth date to see the 2026–27 division.";
+        return;
+      }
+      var year = parseInt(parts[0], 10);
+      var month = parseInt(parts[1], 10);
+      // August 1 cutoff: Aug-Dec birthdays count toward the next soccer year.
+      var age = (month >= 8 ? SEASON_END_YEAR - 1 : SEASON_END_YEAR) - year;
+      if (age < 5) {
+        out.textContent = "Age group U" + age + ": too young for 2026–27 recreational play. The youngest division is U5.";
+        return;
+      }
+      if (age > 19) {
+        out.textContent = "Too old for youth soccer in 2026–27 (U19 is the oldest age group).";
+        return;
+      }
+      var division = DIVISIONS.filter(function (d) { return age <= d.max; })[0];
+      out.innerHTML = "Age group <strong>U" + age + "</strong> &middot; plays in the <strong>" + division.name + "</strong>";
+    });
+  })();
+</script>
 </body>
 </html>

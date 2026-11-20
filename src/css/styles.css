@@ -438,6 +438,47 @@ img { max-width: 100%; display: block; }
 
 .note { color: var(--muted); font-size: .9rem; }
 
+.section-gap { margin-top: 36px; }
+
+/* ---------- Age finder (Age Brackets page) ---------- */
+
+.age-finder {
+  margin: 28px 0 8px;
+  border-top: 4px solid var(--accent);
+}
+.age-finder h3 { margin-top: 0; }
+.age-finder label { display: block; font-weight: 600; margin-bottom: 6px; }
+.age-finder input {
+  font: inherit;
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  min-width: 220px;
+  max-width: 100%;
+  color: var(--ink);
+  background: #fff;
+}
+.age-finder input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--brand-700); }
+.age-finder-result { margin: 14px 0 0; font-size: 1.05rem; }
+.age-finder-result strong { color: var(--brand); }
+
+.table-scroll { overflow-x: auto; }
+
+@media (max-width: 620px) {
+  .board-table thead { display: none; }
+  .board-table tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+    padding: 14px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .board-table td { display: block; padding: 0; border: 0; }
+  .board-table td:nth-child(1) { color: var(--brand); font-weight: 700; }
+  .board-table td:nth-child(2) { text-align: right; font-weight: 600; }
+  .board-table td:nth-child(3) { grid-column: 1 / -1; color: var(--muted); font-size: .9rem; }
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -532,7 +573,6 @@ tbody tr:hover { background: #fdf8f6; }
   background: var(--brand);
   color: #f2cfcf;
   padding: 56px 0 24px;
-  margin-top: 72px;
   font-size: .94rem;
 }
 .site-footer h4 {

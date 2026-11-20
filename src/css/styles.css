@@ -307,6 +307,42 @@ img { max-width: 100%; display: block; }
 }
 .page-hero p { color: #efe4e4; margin: 18px auto 0; max-width: 70ch; }
 
+/* ---------- Season banner (homepage) ---------- */
+
+.season-banner {
+  background: var(--accent);
+  color: var(--brand-deep);
+  padding: 14px 0;
+}
+.season-banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  text-align: center;
+}
+.season-banner p { margin: 0; font-size: 1rem; }
+.season-banner strong {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+}
+.season-sep { margin: 0 6px; }
+.season-link {
+  color: var(--brand-deep);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.season-link:hover { color: var(--brand); }
+
+@media (max-width: 620px) {
+  .season-banner p { display: flex; flex-direction: column; gap: 2px; }
+  .season-sep { display: none; }
+}
+
 /* ---------- Sections & layout ---------- */
 
 .section { padding: 64px 0; }
@@ -332,6 +368,14 @@ img { max-width: 100%; display: block; }
 .prose ul, .prose ol { padding-left: 1.2rem; }
 .prose li { margin-bottom: .4rem; }
 .prose > :first-child { margin-top: 0; }
+
+.field-address {
+  font-style: normal;
+  line-height: 1.5;
+  margin: 0 0 1rem;
+  padding-left: 14px;
+  border-left: 4px solid var(--accent);
+}
 
 .field-figure { margin: 1.25rem 0 0; }
 .field-figure img {

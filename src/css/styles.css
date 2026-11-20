@@ -236,7 +236,7 @@ img { max-width: 100%; display: block; }
   position: relative;
   background:
     linear-gradient(rgba(28, 12, 14, .62), rgba(28, 12, 14, .72)),
-    url("../images/hero.png") center / cover no-repeat;
+    url("../images/hero.jpg") 30% center / cover no-repeat;
   background-color: var(--brand-deep);
   color: #fff;
   text-align: center;
@@ -278,7 +278,7 @@ img { max-width: 100%; display: block; }
 .page-hero {
   background:
     linear-gradient(rgba(28, 12, 14, .66), rgba(28, 12, 14, .76)),
-    url("../images/hero.png") center / cover no-repeat;
+    url("../images/hero.jpg") 30% 40% / cover no-repeat;
   background-color: var(--brand-deep);
   color: #fff;
   text-align: center;

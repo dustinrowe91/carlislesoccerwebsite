@@ -19,6 +19,7 @@
   --wrap: 1160px;
   --header-h: 72px;
   --font: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Oswald", "Arial Narrow", "Segoe UI", sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -41,7 +42,9 @@ h1, h2, h3, h4 {
   line-height: 1.2;
   color: var(--brand);
   margin: 0 0 .5em;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: .01em;
 }
 
 h1 { font-size: clamp(2rem, 4vw, 2.75rem); }
@@ -121,8 +124,10 @@ img { max-width: 100%; display: block; }
 .brand-text { min-width: 0; }
 .brand-name {
   display: block;
-  font-weight: 800;
-  font-size: 1.05rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: .02em;
+  font-size: 1.25rem;
   line-height: 1.15;
   white-space: nowrap;
   overflow: hidden;
@@ -246,7 +251,7 @@ img { max-width: 100%; display: block; }
   color: #fff;
   max-width: 20ch;
   margin: 0 auto .5rem;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: .02em;
   text-transform: uppercase;
   font-size: clamp(2.1rem, 5.5vw, 4rem);
@@ -287,7 +292,7 @@ img { max-width: 100%; display: block; }
 .page-hero h1 {
   color: #fff;
   margin: 0 auto .25em;
-  font-weight: 300;
+  font-weight: 600;
   letter-spacing: .02em;
   text-transform: uppercase;
   font-size: clamp(1.9rem, 4.5vw, 3.1rem);
@@ -411,7 +416,7 @@ tbody tr:hover { background: #fdf8f6; }
 }
 
 .stat { text-align: center; }
-.stat .num { font-size: 2.4rem; font-weight: 800; color: var(--brand-700); line-height: 1; }
+.stat .num { font-family: var(--font-display); font-size: 2.4rem; font-weight: 700; color: var(--brand-700); line-height: 1; }
 .stat .label { color: var(--muted); font-size: .9rem; }
 
 .stat-band {
@@ -461,7 +466,8 @@ tbody tr:hover { background: #fdf8f6; }
 }
 .doc-age {
   font-size: 1.6rem;
-  font-weight: 800;
+  font-family: var(--font-display);
+  font-weight: 700;
   color: var(--brand);
   line-height: 1;
 }
@@ -521,7 +527,7 @@ tbody tr:hover { background: #fdf8f6; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
-@media (max-width: 1240px) {
+@media (max-width: 960px) {
   .nav-toggle { display: block; }
   .nav {
     display: none;

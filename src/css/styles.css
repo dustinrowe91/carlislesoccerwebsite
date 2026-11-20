@@ -133,17 +133,6 @@ img { max-width: 100%; display: block; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.brand-tag {
-  display: block;
-  font-size: .78rem;
-  line-height: 1.15;
-  color: #f6d3d5;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
 .nav-toggle {
   display: none;

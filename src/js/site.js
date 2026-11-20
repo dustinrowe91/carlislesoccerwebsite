@@ -7,8 +7,8 @@
         { label: "Fields", href: "fields.html" },
         { label: "Coaches", href: "coaches.html" },
         { label: "Referees", href: "referees.html" },
-        { label: "About", href: "about.html" },
         { label: "Parents", href: "parents.html" },
+        { label: "About", href: "about.html" },
     ];
 
     function currentPage() {
